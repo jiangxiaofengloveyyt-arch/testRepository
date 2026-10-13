@@ -1,0 +1,17 @@
+version = 1
+
+# 复制为 config.local.toml 后再填写。config.local.toml 被 Git 忽略，不能写入凭据。
+[paths]
+# backend_repo 留为 auto 时，加载器自动把本 Skill 所在仓库识别为后端仓库。
+backend_repo = "auto"
+# 仅在需要前端任务时填写；留空表示本轮不处理前端改动。
+frontend_repo = ""
+# 需要创建隔离 worktree 或留存证据时填写一个目标电脑上已存在的目录。
+automation_workspace = ""
+
+# 使用目标电脑实际可执行的命令或绝对路径。
+python = "python"
+java = ""
+maven_home = ""
+maven_local_repository = ""
+git_usr_bin = ""

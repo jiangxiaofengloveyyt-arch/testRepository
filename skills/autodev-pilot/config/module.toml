@@ -1,0 +1,20 @@
+version = 1
+
+[module]
+id = "contract"
+display_name = "合同"
+domain_reference = "references/domain.md"
+
+[jira]
+project = "NCM"
+filter_id = 40473
+required_label = "AI自动开发"
+issue_types = []
+
+[jira.workflow]
+candidate_statuses = ["新建"]
+running_status = "开发已回复"
+yellow_status = "开发/处理中"
+ready_status = "开发/处理中"
+red_status = "开发已回复"
+failed_status = "开发已回复"

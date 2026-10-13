@@ -1,0 +1,58 @@
+version = 1
+
+# 所有仓库通用的配置骨架。模块身份/JIRA 差异见 module.toml；机器路径见被忽略的 config.local.toml。
+[paths]
+backend_repo = "auto"
+automation_workspace = ""
+# 相对于本 Skill 目录；模板随 Skill 分发。
+templates = "templates"
+# 以下路径分别相对于 backend_repo 或 automation_workspace 解析。
+specs = "specs"
+backend_worktree = "wt-pilot"
+frontend_worktree = "wt-frontend"
+evidence = ".ai-auto-dev/evidence"
+state = ".ai-auto-dev/state"
+
+# 外部仓库和本机工具。留空表示该能力未配置；不得在此保存凭据。
+frontend_repo = ""
+python = "python"
+java = ""
+maven_home = ""
+maven_local_repository = ""
+git_usr_bin = ""
+
+[repositories.backend]
+base_branch = "master"
+branch_prefix = "ai/"
+remote = "origin"
+
+[repositories.frontend]
+base_branch = "master"
+branch_prefix = "ai/"
+remote = "origin"
+
+[jira]
+project = ""
+filter_id = 0
+required_label = "AI自动开发"
+issue_types = []
+
+[jira.workflow]
+# 由 module.toml 或本机覆盖配置填写；空值表示未配置，提示词必须停止取单并报告配置阻断。
+candidate_statuses = []
+running_status = ""
+yellow_status = ""
+ready_status = ""
+red_status = ""
+failed_status = ""
+
+[automation]
+max_per_run = 1
+poll_interval_minutes = 15
+
+[delivery]
+# push/PR 是否属于自动化默认终点；merge/deploy 永远不得由 AI 执行。
+push_pr_default = true
+merge_by_ai = false
+deploy_by_ai = false
+human_review_required = true
