@@ -1,0 +1,28 @@
+username: jiangxiaofengloveyyt-arch
+updatedAt: 2026-10-14T03:40:42.206Z
+skills:
+  teamai:
+    count: 1
+    lastUsed: 2026-10-14T01:23:56.910Z
+interventions:
+  sessions: 5
+  interrupt: 0
+  toolReject: 0
+  correction: 0
+prompts: 7
+tokens:
+  input: 151300
+  output: 2004
+  cacheRead: 446144
+  cacheCreation: 0
+daily:
+  2026-10-14:
+    sessionsEnded: 3
+    sessionsSucceeded: 3
+    promptTurns: 6
+    durationMs: 1738749
+    sessionsCorrected: 0
+    pricedRequests: 0
+    costMicros: 0
+    cacheReadTokens: 446144
+    cacheEligibleInputTokens: 597444
